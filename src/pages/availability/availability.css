@@ -1,0 +1,61 @@
+.shiftLeftParent{
+    /* height: 800px ; */
+}
+.addShifts{
+    margin-top: 150px !important;
+ margin-bottom: 30px !important;
+}
+.txt{
+    color: #09121b;
+    font-size: 20px;
+    /* font-size: 30px; */
+    font-weight: 500 ;
+}
+.page-link{
+    color: #353438 !important;
+   --bs-page-link-active-color: #d0eada !important;
+}
+.menuBg{
+    background-color: #b60144 !important;
+    border-radius: 0px !important;
+}
+option{
+    min-height: 60px !important;
+    padding: 100px !important;
+    
+}
+.saveTable{
+    position: absolute;
+    margin-top: 41% !important;
+    width: 30% !important;
+}
+.SelectArea{
+    font-size: 20px;
+    color: white;
+}
+.tabelRight{
+    background-color: #b60144 !important;
+}
+.pagination-lg{
+    --bs-pagination-padding-x: 52px !important;
+    /* color: #d0eada !important; */
+    border:none !important;
+    box-shadow: none !important;
+    --bs-pagination-focus-box-shadow:none !important;
+    --bs-pagination-active-bg:#108549 !important;
+    --bs-pagination-active-border-color: #108549 !important;
+}
+
+.selectTableTxt{
+    font-size: 22px;
+}
+.blockReservationPending{
+    -webkit-box-shadow: 1px 2px 13px -11px rgba(56,44,38,1);
+    -moz-box-shadow: 1px 2px 13px -11px rgba(56,44,38,1);
+    box-shadow: 1px 2px 13px -11px rgba(56,44,38,1);
+ 
+
+}
+.tableButton{
+    background-color: #d8d8d8 !important;
+}
