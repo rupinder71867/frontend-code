@@ -50,3 +50,21 @@ code {
   padding: left 10%;
   padding-right: 10%;
 }
+.nav-item {
+  background:#b60144;
+  color:white;
+  padding:10px;
+  margin-bottom: 15px;
+}
+.nav-link {
+  color:white !important;
+  text-align: center;
+}
+.nav-link.active {
+  background: #b60144 !important;
+}
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+

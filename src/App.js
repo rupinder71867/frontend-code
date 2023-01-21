@@ -9,6 +9,7 @@ import Rooms from "./pages/floorplan/Rooms";
 import AddTables from "./pages/floorplan/AddTables";
 //  import Tables from "./pages/floorplan/Tables";
 import Permissions from "./pages/people/Permissions";
+import General from "./pages/general/General"
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path = "/rooms" element = {<Rooms/>} />
           <Route path = "/tables" element = {<AddTables/>} />
           <Route path = "/permissions" element = {<Permissions/>} />
+          <Route path = "/general" element = {<General/>} />
       </Routes>
     </BrowserRouter>
   );

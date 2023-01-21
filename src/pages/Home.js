@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import {Container, Row, Col, Button, NavLink} from 'react-bootstrap';
+import {Container, Row, Col, Button, } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell, faEllipsisVertical,faTable,faTableList, faCartShopping, faSquareCheck,faBullhorn,faComment,faNoteSticky,faBookOpen, faPeopleGroup, faFaceGrinHearts} from '@fortawesome/free-solid-svg-icons';
 import Availability from "./AddAvaliability";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
+
 
 const Home = () => {
   const [show, setShow] = useState(false);
@@ -34,7 +35,7 @@ const Home = () => {
         </Col>
       </Row>
       <Row className="mb-3">
-         <Col><div style={{background:"#ff9559"}} className="menu-item rounded-3"><FontAwesomeIcon icon={faTable} color={"white"}/></div><div className='menu-text'>General</div></Col>         
+         <Col><NavLink to='/general'><div style={{background:"#ff9559"}} className="menu-item rounded-3"><FontAwesomeIcon icon={faTable} color={"white"}/></div></NavLink><div className='menu-text'>General</div></Col>         
          <Col><div style={{background:"#2196f3"}} className="menu-item rounded-3"><FontAwesomeIcon icon={faTableList} /></div><div className='menu-text'>Floor Plan</div></Col>
          <Col><div style={{background:"#ff7495"}} className="menu-item rounded-3"><FontAwesomeIcon icon={faSquareCheck} /></div><div className='menu-text'>Availability</div></Col>
          <Col><div style={{background:"#e8ba34"}} className="menu-item rounded-3"><FontAwesomeIcon icon={faCartShopping} /></div><div className='menu-text'>Payment</div></Col>
