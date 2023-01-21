@@ -7,7 +7,7 @@ const General =() => {
     return (
     <Container fluid>
         <Tab.Container defaultActiveKey="first">
-        <Row className="bg-light">
+        <Row>
           <Col className='my-5 col-md-3'>
             <Nav variant="pills" className="flex-column">
               <Nav.Item className = 'nav-item'>

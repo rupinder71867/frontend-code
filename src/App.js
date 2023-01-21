@@ -10,9 +10,14 @@ import AddTables from "./pages/floorplan/AddTables";
 //  import Tables from "./pages/floorplan/Tables";
 import Permissions from "./pages/people/Permissions";
 import General from "./pages/general/General"
+import Header from "./Header";
+import Footer from "./Footer";
+
 
 export default function App() {
   return (
+    <>
+    <Header/>
     <BrowserRouter>
       <Routes>
           <Route path = "/" element = {<Home />} />
@@ -27,6 +32,9 @@ export default function App() {
           <Route path = "/general" element = {<General/>} />
       </Routes>
     </BrowserRouter>
+              <Footer/>
+              </>
+
   );
 }
 

@@ -1,31 +1,37 @@
 import React, { useState } from 'react';
-
 import {Modal, Button, Form, Row, Col, Pagination} from 'react-bootstrap';
-
 
 const AddTagModal = (props)=> {
   const {show, handleClose, handleTags} = props;
   const [active, setActive] = useState(1);
   const [formArr, setformArr] = useState(1);
+  const [validated, setValidated] = useState(false);
+
   const handleSetActive =(e) => {
-   console.log('e=',e.target.text)
    setActive(e.target.text)
   }
+  
   const handleChange = evt => {
     const name = evt.target.name;
     const value = evt.target.value
-    evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
     setformArr({
       ...formArr,
       [name]: value
     })
   }
-  const saveForm =() => {
-    handleTags(formArr);
-  }
 
-
-
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    } else {
+        handleTags(formArr);
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    setValidated(true);
+}    
 
   return (
     <>
@@ -34,11 +40,11 @@ const AddTagModal = (props)=> {
           <Modal.Title>Add Category</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
          <Row>
           <Col>
             <Form.Label>Title</Form.Label>
-            <Form.Control type="text" name="title" onChange={handleChange} placeholder="Enter title" />
+            <Form.Control required type="text" name="title" onChange={handleChange} placeholder="Enter title" />
           </Col>
           </Row>
           <Row>
@@ -52,18 +58,14 @@ const AddTagModal = (props)=> {
             <Form.Label>Choose Tag Color</Form.Label>
             <Form.Control name="color" type="color" onChange={handleChange}/>
             </Col>
-
           </Row>
+        <Row className='mt-2'>
+          <Col align="Right">
+          <Button type="submit">Add Category</Button>
+          </Col>
+        </Row>
         </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={saveForm}>
-            Save
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );

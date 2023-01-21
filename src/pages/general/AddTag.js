@@ -1,9 +1,14 @@
 import {Button, Form, Row, Col} from 'react-bootstrap';
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClose} from '@fortawesome/free-solid-svg-icons'
+
 const AddTag = (props) => {
     const {tagColor} = props;
     const [tag,setTag] = useState([]);
     const [label, setLabel] = useState('');
+    const [validated, setValidated] = useState(false);
+
     const handleTag = () => {
         setTag(tag => [...tag,label] );
         setLabel('');
@@ -11,26 +16,49 @@ const AddTag = (props) => {
     const handleChange = (evt) => {
         setLabel(evt.target.value);
     }
+    const removeTag = (arrIndex) => {
+        setTag([
+            ...tag.slice(0, arrIndex),
+            ...tag.slice(arrIndex + 1)
+          ]);
+
+    }
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }else {
+            setTag(tag => [...tag,label] );
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        setValidated(true);
+        setLabel('');
+    }    
     return (
         <>
-         <Form>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mt-2">
            
           <Col className="col-md-6">
-            <Form.Control type="text" name="title" value={label} onChange={handleChange} placeholder="Enter tag" />
+            <Form.Control required type="text" name="title" value={label} onChange={handleChange} placeholder="Enter tag" />
           </Col>
           <Col className="col-md-4">
-          <Button variant="primary" onClick={handleTag}>
-            Add Tag
-          </Button>
+          <Button type="submit">Add Tag</Button>
+
           </Col>
           
         </Row>
         </Form>
         <Row style={{color:tagColor}} className="mt-2">
                 {tag.map((x, i) =>
-                  <Col className="col-md-2">{x}</Col>
-
+                  <Col className="col-md-2 tag-item mt-2 mx-2">
+                    <Row>
+                        <Col>{x}</Col>
+                        <Col align="Right"><FontAwesomeIcon onClick={()=>removeTag(i)} style={{cursor:'pointer'}}icon={faClose}/></Col>
+                    </Row>
+                </Col>
                 )}
         </Row>
         </>
@@ -38,3 +66,4 @@ const AddTag = (props) => {
 }
 
 export default AddTag;
+
