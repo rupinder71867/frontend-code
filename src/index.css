@@ -18,7 +18,6 @@ code {
     color: #151414 !important;
     background: none !important;
     border: solid 1px !important;
-    margin-right: 7px;
 }
 
 .top-right {
@@ -75,4 +74,14 @@ code {
 
 .container-height {
     min-height: 90vh;
+}
+
+.section-container {
+    border: 1px solid;
+    padding: 10px;
+    border-color: crimson;
+}
+
+.pad-left {
+    padding-left: 10%;
 }

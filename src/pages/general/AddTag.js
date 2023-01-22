@@ -55,8 +55,8 @@ const AddTag = (props) => {
                 {tag.map((x, i) =>
                   <Col className="col-md-2 tag-item mt-2 mx-2">
                     <Row>
-                        <Col>{x}</Col>
-                        <Col align="Right"><FontAwesomeIcon onClick={()=>removeTag(i)} style={{cursor:'pointer'}}icon={faClose}/></Col>
+                        <Col className="md-6">{x}</Col>
+                        <Col className="md-6" align="Right"><FontAwesomeIcon onClick={()=>removeTag(i)} style={{cursor:'pointer'}}icon={faClose}/></Col>
                     </Row>
                 </Col>
                 )}

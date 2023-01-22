@@ -13,7 +13,6 @@ const Client = () => {
         setShow(false)
     }
     const handleSetActive =(e) => {
-        console.log('e=',e.target.text)
         setActive(e.target.text)
     }
     return(

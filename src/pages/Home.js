@@ -24,17 +24,15 @@ const Home = () => {
     <Container fluid>
 
       <Row className='top-section'>
-        <Col>
+        <Col className="md-2">
           <div style={{color:"black"}}>Good Evening, Zaib</div>
           <div style={{color:"grey"}}>Manager Permission</div>
         </Col>
-        <Col className='d-flex justify-content-end align-items-center gap-2'>
-         <div>
-
-         <Button className = "top-left" onClick={showAddVenu}>Add Venu</Button>
-         <Button className = "top-left" onClick={handleShow}>Add Reservation</Button>
-         </div>
-        <FontAwesomeIcon icon={faEllipsisVertical} />
+        <Col className="md-10" >
+         <Row className="gap-4 justify-content-end">
+         <Button as={Col} md="5" className = "top-left mt-1" onClick={showAddVenu}>Select Venu</Button>
+         <Button as={Col} md="5" className = "top-left mt-1" onClick={handleShow}>Add Reservation</Button>
+         </Row>
         </Col>
       </Row>
       <Row className="mb-3">
@@ -51,7 +49,6 @@ const Home = () => {
          <Col><div style={{background:"#1fb37c"}} className="menu-item rounded-3"><FontAwesomeIcon icon={faFaceGrinHearts} /></div><div className='menu-text'>My Guest</div></Col>
          <Col><NavLink to="/permissions"><div style={{background:"#1fb37c"}} className="menu-item rounded-3"><FontAwesomeIcon icon={faPeopleGroup} /></div></NavLink><div className='menu-text'>People</div></Col>
        </Row>
-
     </Container>
     </>
 

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import AddVenu from "./pages/AddVenu";
+import AddVenu from "./pages/general/AddVenu";
 import Shifts from "./pages/availability/Shifts";
 import OnlineInventory from "./pages/availability/OnlineInventory";
 import Waitlist from "./pages/availability/Waitlist";

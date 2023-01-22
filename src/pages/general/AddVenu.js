@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import '../../App.css'
 import { validEmail, validPassword } from '../Rejex.js';
-const Profile = () => {
+const AddVenu = () => {
 
     const [values, setValues] = useState({
         address: "",
@@ -32,69 +32,48 @@ const Profile = () => {
         setValidated(true);
     };
     return (
-            <Row>
+            <Row className="section-container">
                 <Col>
-                    <h4>Profile Information</h4>
+                    <h4>Venu Information</h4>
                     <Form noValidate validated={validated} onSubmit={handleSubmit}>
                         <Row className="mb-3">
-                        <Form.Group as={Col} md="4">
-                            <Form.Label>Profile Image</Form.Label>
-                                <Form.Control
-                                    required
-                                    type="file"
-                                    name="profile-img"
-                                    onChange={handleChange("fname")}
-                                />
-                            </Form.Group>
-                            <Form.Group as={Col} md="4">
-                                <Form.Label>First Name</Form.Label>
+                            <Form.Group as={Col} md="4" controlId="validationCustom01">
+                                <Form.Label>Address</Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
-                                    name="fname"
-                                    placeholder="Enter First Name" 
-                                    onChange={handleChange("fname")}
+                                    name="address"
+                                    placeholder="Address" 
+                                    onChange={handleChange("address")}
                                 />
                             </Form.Group>
-
-                            <Form.Group as={Col} md="4">
+                            <Form.Group as={Col} md="4" controlId="validationCustom02">
                                 <Form.Label>City</Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
-                                    name="city"
-                                    placeholder="city" 
                                     onChange={handleChange("city")}
-                                />
-                            </Form.Group>
-                        </Row>
-                        <Row className="mb-3">
-                        <Form.Group as={Col} md="4">
-                                <Form.Label>State</Form.Label>
-                                <Form.Control
-                                    required
-                                    type="text"
-                                    onChange={handleChange("state")}
-                                    placeholder="State"                                    
+                                    placeholder="City"                                    
                                 />    
                             </Form.Group>
-                            <Form.Group as={Col} md="4">
+                            <Form.Group as={Col} md="4" controlId="validationCustom03">
                                 <Form.Label>Country</Form.Label>
                                 <Form.Control
                                     required
                                     type="text"
                                     onChange={handleChange}
-                                    placeholder="Country"                                    
+                                    placeholder="country"                                    
                                 />  
                             </Form.Group>
-                            <Form.Group as={Col} md="4">
-                                <Form.Label>Mobile No</Form.Label>
-                                <Form.Control
-                                    required
-                                    type="text"
-                                    onChange={handleChange}
-                                    placeholder="Mobile Number"                                    
-                                />  
+                        </Row>
+                        <Row className="mb-3">
+                            <Form.Group as={Col} md="6" controlId="validationCustom04">
+                                <Form.Label>Website</Form.Label>
+                                <Form.Control onChange={handleChange} type="text" placeholder="https://WWW.servername.com" required />  
+                            </Form.Group>
+                            <Form.Group as={Col} md="6" controlId="validationCustom04">
+                                <Form.Label>Reservation Widget Link</Form.Label>
+                                <Form.Control onChange={handleChange} type="text" placeholder="https://WWW.servername.com" required />
                             </Form.Group>
                         </Row>
                         <h4>Social Media Links</h4> 
@@ -130,4 +109,4 @@ const Profile = () => {
             </Row>
     );
 }
-export default Profile;
+export default AddVenu;
