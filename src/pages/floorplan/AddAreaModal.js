@@ -37,7 +37,7 @@ const AddAreaModal = (props)=> {
     <>
       <Modal show = {show} onHide = {handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add Room</Modal.Title>
+          <Modal.Title>Add Area</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>

@@ -1,30 +1,46 @@
-import {Container, Row, Col, Tab, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 import RoomListing from './RoomListing';
 import SittingAreaListing from './SittingAreaListing';
 import TableListing from './TableListing';
+import TableGrouping from './TableGrouping';
+import React, { useState, useEffect } from 'react';
 
-const Rooms =() => {
-    return (
+
+const Rooms = () => {
+  const [tablesList, setTablesList] = useState([]);
+  const [areaList, setAreaList] = useState([]);
+  const [roomList, setRoomList] = useState([]);
+  const handleAreaList = (areas) => {
+    setAreaList(areas);
+  }
+  const handleTablesList = (tables) => {
+    console.log('tables=', tables);
+    setTablesList(tables);
+  }
+  const handleRoomsList = (rooms) => {
+    setRoomList(rooms);
+  }
+  return (
     <Container fluid>
-       <Row className="mt-3">
+      <Row className="mt-3">
         <Col>
-           <h4>Floor Plans</h4>
+          <h4>Floor Plans</h4>
         </Col>
-       </Row>
-        <Tab.Container defaultActiveKey="first">
+      </Row>
+      <Tab.Container defaultActiveKey="first">
         <Row>
           <Col className='my-5 col-md-3'>
             <Nav variant="pills" className="flex-column">
-              <Nav.Item className = 'nav-item'>
+              <Nav.Item className='nav-item'>
                 <Nav.Link eventKey="first" className="nav-link">Rooms</Nav.Link>
               </Nav.Item>
-              <Nav.Item className = 'nav-item'>
+              <Nav.Item className='nav-item'>
                 <Nav.Link eventKey="second" className="nav-link">Sittting Area</Nav.Link>
               </Nav.Item>
-              <Nav.Item className = 'nav-item'>
+              <Nav.Item className='nav-item'>
                 <Nav.Link eventKey="third" className="nav-link">Tables</Nav.Link>
               </Nav.Item>
-              <Nav.Item className = 'nav-item'>
+              <Nav.Item className='nav-item'>
                 <Nav.Link eventKey="fourth" className="nav-link">Table Grouping</Nav.Link>
               </Nav.Item>
             </Nav>
@@ -32,23 +48,23 @@ const Rooms =() => {
           <Col className='my-5 pe-5 ps-5 col-md-9'>
             <Tab.Content>
               <Tab.Pane eventKey="first">
-                 <RoomListing/>
+                <RoomListing handleRoomsList={handleRoomsList} />
               </Tab.Pane>
               <Tab.Pane eventKey="second">
-                <SittingAreaListing/>
+                <SittingAreaListing handleAreaList={handleAreaList} />
               </Tab.Pane>
               <Tab.Pane eventKey="third">
-                <TableListing/>
+                <TableListing areaList={areaList} handleTablesList={handleTablesList} />
               </Tab.Pane>
               <Tab.Pane eventKey="fourth">
-                <h4>Table Grouping</h4>
+                <TableGrouping roomList={roomList} tablesList={tablesList} />
               </Tab.Pane>
             </Tab.Content>
           </Col>
         </Row>
       </Tab.Container>
-      </Container>
+    </Container>
 
-    )
+  )
 }
 export default Rooms;
