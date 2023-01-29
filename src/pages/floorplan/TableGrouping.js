@@ -31,10 +31,6 @@ const TableGrouping = (props) => {
   setShow(false);
 
  }
-
-
-
-
  return (
   <>
    {show ? <CreateTableGroupModal tablesList={tablesList} roomList={roomList} show={show} handleTableGroup={handleTableGroup} handleClose={handleClose} handleShow={handleShow} /> : ''}

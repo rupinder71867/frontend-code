@@ -6,34 +6,33 @@ import OnlineInventory from "./pages/availability/OnlineInventory";
 import Waitlist from "./pages/availability/Waitlist";
 import AddBlock from "./pages/availability/AddBlock";
 import Rooms from "./pages/floorplan/Rooms";
-import AddTables from "./pages/floorplan/AddTables";
-//  import Tables from "./pages/floorplan/Tables";
 import Permissions from "./pages/people/Permissions";
 import General from "./pages/general/General"
 import Header from "./Header";
 import Footer from "./Footer";
+import MarketingAutomation from "./pages/marketing/MarketingAutomation";
 
 
 export default function App() {
   return (
     <>
-    <Header/>
-    <BrowserRouter>
-      <Routes>
-          <Route path = "/" element = {<Home />} />
-          <Route path = "/add-venu" element = {<AddVenu/>} />
-          <Route path = "/shifts" element = {<Shifts/>} />
-          <Route path = "/inventory" element = {<OnlineInventory/>} />
-          <Route path = "/waitlist" element = {<Waitlist/>} />
-          <Route path = "/add-block" element = {<AddBlock/>} />
-          <Route path = "/rooms" element = {<Rooms/>} />
-          <Route path = "/tables" element = {<AddTables/>} />
-          <Route path = "/permissions" element = {<Permissions/>} />
-          <Route path = "/general" element = {<General/>} />
-      </Routes>
-    </BrowserRouter>
-              <Footer/>
-              </>
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add-venu" element={<AddVenu />} />
+          <Route path="/shifts" element={<Shifts />} />
+          <Route path="/inventory" element={<OnlineInventory />} />
+          <Route path="/waitlist" element={<Waitlist />} />
+          <Route path="/add-block" element={<AddBlock />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/permissions" element={<Permissions />} />
+          <Route path="/general" element={<General />} />
+          <Route path="/marketing" element={<MarketingAutomation />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </>
 
   );
 }
