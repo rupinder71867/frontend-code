@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom'
 import Pagination from 'react-bootstrap/Pagination';
-import '..//availability/availability.css'
+//import '..//availability/availability.css'
 const Permissions = () => {
     return (
         <Container fluid>
@@ -86,15 +86,10 @@ const Permissions = () => {
                                                 placeholder="City"
                                             />
                                         </Col>
-
                                         <Form.Control.Feedback type="invalid">
                                             Please enter valid data.
                                         </Form.Control.Feedback>
                                     </Form.Group>
-
-
-
-
                                 </Col>
                             </Row>
 

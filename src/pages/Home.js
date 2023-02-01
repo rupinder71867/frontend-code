@@ -38,7 +38,7 @@ const Home = () => {
         <Row className="mb-3">
           <Col><NavLink to='/general'><div style={{ background: "#ff9559" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faTable} color={"white"} /></div></NavLink><div className='menu-text'>General</div></Col>
           <Col><NavLink to="/rooms"><div style={{ background: "#2196f3" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faTableList} /></div></NavLink><div className='menu-text'>Floor Plan</div></Col>
-          <Col><NavLink to='/shifts'><div style={{ background: "#ff7495" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faSquareCheck} /></div></NavLink><div className='menu-text'>Availability</div></Col>
+          <Col><NavLink to='/avaliability'><div style={{ background: "#ff7495" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faSquareCheck} /></div></NavLink><div className='menu-text'>Availability</div></Col>
           <Col><div style={{ background: "#e8ba34" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faCartShopping} /></div><div className='menu-text'>Payment</div></Col>
           <Col><NavLink to='/marketing'><div style={{ background: "#ff6759" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faBullhorn} /></div></NavLink><div className='menu-text'>Marketing Automation</div></Col>
         </Row>

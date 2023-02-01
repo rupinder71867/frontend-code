@@ -62,11 +62,12 @@ const CreateTrackingLink = (props) => {
  return (
   <>
    <Modal className="modal-lg" show={show} onHide={handleClose}>
-    <Modal.Header closeButton>
-     <Modal.Title>Create AutoMated Email</Modal.Title>
-    </Modal.Header>
-    <Modal.Body>
-     <Form noValidate validated={validated} onSubmit={handleSubmit}>
+    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+
+     <Modal.Header closeButton>
+      <Modal.Title>Create AutoMated Email</Modal.Title>
+     </Modal.Header>
+     <Modal.Body>
       <Row>
        <Col>
         <Form.Label style={{ width: '100%' }}>Social Media</Form.Label>
@@ -83,15 +84,22 @@ const CreateTrackingLink = (props) => {
 
       </Row>
 
+     </Modal.Body>
+     <Modal.Footer>
       <Form.Group>
-       <Row className='mt-5'>
+       <Row>
+        <Col>
+         <Button onClick={handleClose}>Cancal</Button>
+        </Col>
         <Col align="Right">
          <Button type="submit">Save</Button>
         </Col>
        </Row>
       </Form.Group>
-     </Form>
-    </Modal.Body>
+     </Modal.Footer>
+
+    </Form>
+
    </Modal>
   </>
  );

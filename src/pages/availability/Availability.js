@@ -1,14 +1,12 @@
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
-import AutoMatedMessage from './AutoMatedMessage';
-import AutoTagEmail from './AutoTagEmail';
-import TrackingLink from './TrackingLink';
+import Shifts from './Shifts';
 
-const MarketingAutomation = () => {
+const Availability = () => {
  return (
   <Container fluid>
    <Row className="mt-3">
     <Col>
-     <h4>Marketing Automation</h4>
+     <h4>Avaiability</h4>
     </Col>
    </Row>
    <Tab.Container defaultActiveKey="first">
@@ -16,28 +14,34 @@ const MarketingAutomation = () => {
      <Col className='my-5 col-md-3'>
       <Nav variant="pills" className="flex-column">
        <Nav.Item className='nav-item'>
-        <Nav.Link eventKey="first" className="nav-link">Auto Tag</Nav.Link>
+        <Nav.Link eventKey="first" className="nav-link">Shifts</Nav.Link>
        </Nav.Item>
        <Nav.Item className='nav-item'>
-        <Nav.Link eventKey="second" className="nav-link">Automated Messages</Nav.Link>
+        <Nav.Link eventKey="second" className="nav-link">Online Inventory</Nav.Link>
        </Nav.Item>
        <Nav.Item className='nav-item'>
-        <Nav.Link eventKey="third" className="nav-link">Tracking link</Nav.Link>
+        <Nav.Link eventKey="third" className="nav-link">Add block</Nav.Link>
+       </Nav.Item>
+       <Nav.Item className='nav-item'>
+        <Nav.Link eventKey="fourth" className="nav-link">Reservation Widget</Nav.Link>
+       </Nav.Item>
+       <Nav.Item className='nav-item'>
+        <Nav.Link eventKey="fifth" className="nav-link">Waitlist</Nav.Link>
        </Nav.Item>
       </Nav>
      </Col>
      <Col className='my-5 pe-5 ps-5 col-md-9'>
       <Tab.Content>
        <Tab.Pane eventKey="first">
-        <AutoTagEmail />
+        <Shifts />
        </Tab.Pane>
        <Tab.Pane eventKey="second">
-        <AutoMatedMessage />
        </Tab.Pane>
        <Tab.Pane eventKey="third">
-        <TrackingLink />
        </Tab.Pane>
        <Tab.Pane eventKey="fourth">
+       </Tab.Pane>
+       <Tab.Pane eventKey="fifth">
        </Tab.Pane>
       </Tab.Content>
      </Col>
@@ -47,4 +51,4 @@ const MarketingAutomation = () => {
 
  )
 }
-export default MarketingAutomation;
+export default Availability;
