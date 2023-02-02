@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form, Row, Col, Pagination, ModalFooter } from 'react-bootstrap';
 
-const AddShiftModal = (props) => {
+const AddOnlineInvenotryModal = (props) => {
  const { show, handleClose, handleData } = props;
  const [active, setActive] = useState(0);
  const [formArr, setformArr] = useState(1);
@@ -48,7 +48,7 @@ const AddShiftModal = (props) => {
       <Row>
 
        <Col>
-        <Form.Label>Shift Title</Form.Label>
+        <Form.Label> Title</Form.Label>
         <Form.Control required type="text" name="shiftTitle" onChange={handleChange} />
        </Col>
        <Col>
@@ -139,5 +139,5 @@ const AddShiftModal = (props) => {
  );
 }
 
-export default AddShiftModal;
+export default AddOnlineInvenotryModal;
 

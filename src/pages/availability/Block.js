@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Table } from 'react-bootstrap';
-import AddShiftModal from './AddShiftModal';
+import AddBlockModal from './AddBlockModal';
 
-const Shifts = () => {
+const Block = () => {
     const [show, setShow] = useState(false);
     const [shiftList, setShiftList] = useState([]);
     const handleShow = () => {
@@ -17,16 +17,16 @@ const Shifts = () => {
 
     }
     return (
-        <>{show ? <AddShiftModal handleData={handleData} show={show} handleClose={handleClose} /> : ''}
+        <>{show ? <AddBlockModal handleData={handleData} show={show} handleClose={handleClose} /> : ''}
             <Row>
-                <Col align="center"><h4>Shifts</h4></Col>
+                <Col align="center"><h4>Blocks</h4></Col>
             </Row>
             <Row className="border-bottom">
                 <Col style={{ fontWeight: 600 }}>
-                    Shifts
+                    Blocks
                 </Col>
                 <Col align="Right">
-                    <Button variant="primary" onClick={handleShow}>Add Shift</Button>
+                    <Button variant="primary" onClick={handleShow}>Add Block</Button>
                 </Col>
             </Row>
             <Row>
@@ -37,9 +37,9 @@ const Shifts = () => {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Shift Title</th>
+                            <th>Block Title</th>
                             <th>Status</th>
-                            <th>Start Date</th>
+                            <th>Start Time</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,7 +48,7 @@ const Shifts = () => {
                                 <td>{i + 1}</td>
                                 <td>{x.shiftTitle}</td>
                                 <td>Active</td>
-                                <td>{x.sdate}</td>
+                                <td>{x.ftime}</td>
                             </tr>
 
                         )}
@@ -59,4 +59,4 @@ const Shifts = () => {
         </>
     )
 }
-export default Shifts;
+export default Block;

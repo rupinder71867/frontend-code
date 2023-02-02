@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import MarketingAutomation from "./pages/marketing/MarketingAutomation";
 import Availability from "./pages/availability/Availability";
+import Rooms from "./pages/floorplan/Rooms"
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/add-venu" element={<AddVenu />} />
           <Route path="/avaliability" element={<Availability />} />
           <Route path="/general" element={<General />} />
+          <Route path="/rooms" element={<Rooms />} />
           <Route path="/marketing" element={<MarketingAutomation />} />
         </Routes>
       </BrowserRouter>

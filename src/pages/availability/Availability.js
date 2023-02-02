@@ -1,5 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 import Shifts from './Shifts';
+import OnlineInventory from './OnlineInventory';
+import Waitlist from './Waitlist';
+import Block from './Block';
 
 const Availability = () => {
  return (
@@ -36,12 +39,15 @@ const Availability = () => {
         <Shifts />
        </Tab.Pane>
        <Tab.Pane eventKey="second">
+        <OnlineInventory />
        </Tab.Pane>
        <Tab.Pane eventKey="third">
+        <Block />
        </Tab.Pane>
        <Tab.Pane eventKey="fourth">
        </Tab.Pane>
        <Tab.Pane eventKey="fifth">
+        <Waitlist />
        </Tab.Pane>
       </Tab.Content>
      </Col>
