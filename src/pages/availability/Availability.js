@@ -3,6 +3,7 @@ import Shifts from './Shifts';
 import OnlineInventory from './OnlineInventory';
 import Waitlist from './Waitlist';
 import Block from './Block';
+import BlockTable from './BlockTable';
 
 const Availability = () => {
  return (
@@ -23,10 +24,10 @@ const Availability = () => {
         <Nav.Link eventKey="second" className="nav-link">Online Inventory</Nav.Link>
        </Nav.Item>
        <Nav.Item className='nav-item'>
-        <Nav.Link eventKey="third" className="nav-link">Add block</Nav.Link>
+        <Nav.Link eventKey="third" className="nav-link">Block Reservation</Nav.Link>
        </Nav.Item>
        <Nav.Item className='nav-item'>
-        <Nav.Link eventKey="fourth" className="nav-link">Reservation Widget</Nav.Link>
+        <Nav.Link eventKey="fourth" className="nav-link">Block Table</Nav.Link>
        </Nav.Item>
        <Nav.Item className='nav-item'>
         <Nav.Link eventKey="fifth" className="nav-link">Waitlist</Nav.Link>
@@ -45,6 +46,7 @@ const Availability = () => {
         <Block />
        </Tab.Pane>
        <Tab.Pane eventKey="fourth">
+        <BlockTable />
        </Tab.Pane>
        <Tab.Pane eventKey="fifth">
         <Waitlist />
