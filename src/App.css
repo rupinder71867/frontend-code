@@ -36,3 +36,48 @@
         transform: rotate(360deg);
     }
 }
+
+.activeReport {
+    vertical-align: middle;
+    border: 1px solid;
+    border-radius: 500px;
+    background: black;
+    text-align: center;
+    color: white;
+    height: 68px;
+    padding: 19px;
+}
+
+.activeNoReport {
+    vertical-align: middle;
+    height: 68px;
+    padding: 19px;
+}
+
+.test:after {
+    content: '\2807';
+    font-size: 100px;
+}
+
+.filterBorder {
+    border: 1px solid;
+    padding: 10px;
+    background: white;
+    border-radius: 21px;
+}
+
+.progressBorder {
+    border: 1px solid;
+    padding: 10px;
+    background: white;
+    border-radius: 11px;
+}
+
+.paymentItem {
+    border: 1px solid;
+    padding: 56px;
+    background: white;
+    border-radius: 18px;
+    margin-left: 2%;
+    text-align: center;
+}

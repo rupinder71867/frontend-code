@@ -39,15 +39,15 @@ const Home = () => {
           <Col><NavLink to='/general'><div style={{ background: "#ff9559" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faTable} color={"white"} /></div></NavLink><div className='menu-text'>General</div></Col>
           <Col><NavLink to="/rooms"><div style={{ background: "#2196f3" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faTableList} /></div></NavLink><div className='menu-text'>Floor Plan</div></Col>
           <Col><NavLink to='/avaliability'><div style={{ background: "#ff7495" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faSquareCheck} /></div></NavLink><div className='menu-text'>Availability</div></Col>
-          <Col><div style={{ background: "#e8ba34" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faCartShopping} /></div><div className='menu-text'>Payment</div></Col>
+          <Col><NavLink to='/payment'><div style={{ background: "#e8ba34" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faCartShopping} /></div></NavLink><div className='menu-text'>Payment</div></Col>
           <Col><NavLink to='/marketing'><div style={{ background: "#ff6759" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faBullhorn} /></div></NavLink><div className='menu-text'>Marketing Automation</div></Col>
         </Row>
         <Row>
           <Col><div style={{ background: "#4bb04f" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faComment} /></div><div className='menu-text'>Menu</div></Col>
-          <Col><div style={{ background: "#4bb04f" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faNoteSticky} /></div><div className='menu-text'>Integration</div></Col>
-          <Col><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faBookOpen} /></div><div className='menu-text'>Reports</div></Col>
-          <Col><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faFaceGrinHearts} /></div><div className='menu-text'>My Guest</div></Col>
-          <Col><NavLink to="/permissions"><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faPeopleGroup} /></div></NavLink><div className='menu-text'>People</div></Col>
+          <Col><NavLink to='/integration'><div style={{ background: "#4bb04f" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faNoteSticky} /></div></NavLink><div className='menu-text'>Integration</div></Col>
+          <Col><NavLink to='/report'><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faBookOpen} /></div></NavLink><div className='menu-text'>Reports</div></Col>
+          <Col><NavLink to='/guest'><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faFaceGrinHearts} /></div></NavLink><div className='menu-text'>My Guest</div></Col>
+          <Col><NavLink to="/people"><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faPeopleGroup} /></div></NavLink><div className='menu-text'>People</div></Col>
         </Row>
       </Container>
     </>

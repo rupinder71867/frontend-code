@@ -7,6 +7,11 @@ import Footer from "./Footer";
 import MarketingAutomation from "./pages/marketing/MarketingAutomation";
 import Availability from "./pages/availability/Availability";
 import Rooms from "./pages/floorplan/Rooms"
+import People from "./pages/people/People";
+import GuestList from "./pages/guest/GuestList";
+import Report from './pages/report/Report';
+import Integration from './pages/Integraion/Integration';
+import Payment from './pages/payment/payment';
 
 
 export default function App() {
@@ -21,6 +26,11 @@ export default function App() {
           <Route path="/general" element={<General />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/marketing" element={<MarketingAutomation />} />
+          <Route path="/people" element={<People />} />
+          <Route path="/guest" element={<GuestList />} />
+          <Route path="/report" element={<Report />} />
+          <Route path="/integration" element={<Integration />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </BrowserRouter>
       <Footer />
