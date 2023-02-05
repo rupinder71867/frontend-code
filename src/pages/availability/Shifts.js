@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Table } from 'react-bootstrap';
 import AddShiftModal from './AddShiftModal';
+import { FaTrashAlt } from "react-icons/fa";
+
 
 const Shifts = () => {
     const [show, setShow] = useState(false);
@@ -14,6 +16,13 @@ const Shifts = () => {
     const handleData = (item) => {
         setShiftList(shiftList => [...shiftList, item]);
         setShow(false);
+
+    }
+    const removeTable = (arrIndex) => {
+        setShiftList([
+            ...shiftList.slice(0, arrIndex),
+            ...shiftList.slice(arrIndex + 1)
+        ]);
 
     }
     return (
@@ -40,6 +49,7 @@ const Shifts = () => {
                             <th>Shift Title</th>
                             <th>Status</th>
                             <th>Start Date</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,6 +59,7 @@ const Shifts = () => {
                                 <td>{x.shiftTitle}</td>
                                 <td>Active</td>
                                 <td>{x.sdate}</td>
+                                <td><FaTrashAlt onClick={() => removeTable(i)} /></td>
                             </tr>
 
                         )}

@@ -69,7 +69,9 @@ code {
 
 .tag-item {
     border: 2px solid;
-    background-color: lightgray;
+    background-color: #787474;
+    border-radius: 15px;
+    color: white
 }
 
 .container-height {

@@ -40,7 +40,7 @@ const AddOnlineInvenotryModal = (props) => {
   <>
    <Modal show={show} onHide={handleClose} className="modal-lg">
     <Modal.Header closeButton>
-     <Modal.Title>Add Shift</Modal.Title>
+     <Modal.Title>Add On line Inventory</Modal.Title>
     </Modal.Header>
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
 

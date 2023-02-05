@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Table } from 'react-bootstrap';
 import AddTableBlockModal from './AddTableBlockModal';
+import { FaTrashAlt } from "react-icons/fa";
+
 
 const BlockTable = () => {
  const [show, setShow] = useState(false);
@@ -16,6 +18,14 @@ const BlockTable = () => {
   setShow(false);
 
  }
+ const removeTable = (arrIndex) => {
+  setShiftList([
+   ...shiftList.slice(0, arrIndex),
+   ...shiftList.slice(arrIndex + 1)
+  ]);
+
+ }
+
  return (
   <>{show ? <AddTableBlockModal handleData={handleData} show={show} handleClose={handleClose} /> : ''}
    <Row>
@@ -40,6 +50,7 @@ const BlockTable = () => {
        <th>Block Title</th>
        <th>Start Date</th>
        <th>End Date</th>
+       <th>Action</th>
       </tr>
      </thead>
      <tbody>
@@ -49,6 +60,8 @@ const BlockTable = () => {
         <td>{x.shiftTitle}</td>
         <td>{x.sdate}</td>
         <td>{x.edate}</td>
+        <td><FaTrashAlt onClick={() => removeTable(i)} /></td>
+
        </tr>
 
       )}

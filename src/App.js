@@ -12,6 +12,7 @@ import GuestList from "./pages/guest/GuestList";
 import Report from './pages/report/Report';
 import Integration from './pages/Integraion/Integration';
 import Payment from './pages/payment/payment';
+import Menu from './pages/menu/Menu';
 
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/report" element={<Report />} />
           <Route path="/integration" element={<Integration />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/menu" element={<Menu />} />
         </Routes>
       </BrowserRouter>
       <Footer />

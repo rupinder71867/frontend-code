@@ -43,7 +43,7 @@ const Home = () => {
           <Col><NavLink to='/marketing'><div style={{ background: "#ff6759" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faBullhorn} /></div></NavLink><div className='menu-text'>Marketing Automation</div></Col>
         </Row>
         <Row>
-          <Col><div style={{ background: "#4bb04f" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faComment} /></div><div className='menu-text'>Menu</div></Col>
+          <Col><NavLink to="/menu"><div style={{ background: "#4bb04f" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faComment} /></div></NavLink><div className='menu-text'>Menu</div></Col>
           <Col><NavLink to='/integration'><div style={{ background: "#4bb04f" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faNoteSticky} /></div></NavLink><div className='menu-text'>Integration</div></Col>
           <Col><NavLink to='/report'><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faBookOpen} /></div></NavLink><div className='menu-text'>Reports</div></Col>
           <Col><NavLink to='/guest'><div style={{ background: "#1fb37c" }} className="menu-item rounded-3"><FontAwesomeIcon icon={faFaceGrinHearts} /></div></NavLink><div className='menu-text'>My Guest</div></Col>
