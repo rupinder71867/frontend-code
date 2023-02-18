@@ -13,7 +13,7 @@ const Home = () => {
   const handleShow = () => setShow(true);
   let navigate = useNavigate();
   const showAddVenu = () => {
-    let path = `add-venu`;
+    let path = `/add-venu`;
     navigate(path);
   }
 
