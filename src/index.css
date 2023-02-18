@@ -54,7 +54,7 @@ code {
 }
 
 .nav-link {
-    color: white !important;
+    color: white ;
     text-align: center;
 }
 
@@ -86,4 +86,8 @@ code {
 
 .pad-left {
     padding-left: 10%;
+}
+
+.head-nav-links .nav-link {
+    color: #151414;
 }
