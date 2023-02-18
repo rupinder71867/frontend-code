@@ -1,9 +1,18 @@
-import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav, Button } from 'react-bootstrap';
 import AutoMatedMessage from './AutoMatedMessage';
 import AutoTagEmail from './AutoTagEmail';
 import TrackingLink from './TrackingLink';
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+
+
 
 const MarketingAutomation = () => {
+ const navigate = useNavigate();
+ const redirectHome = () => {
+  navigate('/');
+ }
+
  return (
   <Container fluid>
    <Row className="mt-3">
@@ -25,6 +34,8 @@ const MarketingAutomation = () => {
         <Nav.Link eventKey="third" className="nav-link">Tracking link</Nav.Link>
        </Nav.Item>
       </Nav>
+      <Button onClick={redirectHome} style={{ width: '100%' }}><FaArrowLeft /> Back</Button>
+
      </Col>
      <Col className='my-5 pe-5 ps-5 col-md-9'>
       <Tab.Content>

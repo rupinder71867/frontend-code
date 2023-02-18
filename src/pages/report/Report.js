@@ -3,7 +3,15 @@ import React, { useState, useEffect } from 'react';
 import { FaBell, FaRegDotCircle, FaHome } from "react-icons/fa";
 import Filter from './Filter'
 import ProgressBar from './ProgressBar';
+import { FaStripe, FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 const Report = (props) => {
+ const navigate = useNavigate();
+ const redirectHome = () => {
+  navigate('/');
+ }
+
  const [show, setShow] = useState(false);
  const handleClose = () => {
   setShow(false);
@@ -91,6 +99,12 @@ const Report = (props) => {
     </Col>
 
    </Row>
+   <Row>
+    <Col>
+     <Button onClick={redirectHome} style={{ width: '100%', textAlign: 'center', margin: "20px" }}><FaArrowLeft /> Back</Button>
+    </Col>
+   </Row>
+
 
   </Container >
 

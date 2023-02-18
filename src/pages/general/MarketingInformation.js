@@ -39,7 +39,7 @@ const MarketingInformation = () => {
   );
 
   return (
-    <Row className="section-container">
+    <Row className="section-container" style={{ backgroundColor: 'grey', border: '1px solid', borderRadius: '2px' }}>
       <Col>
         <h4>Marketing Information</h4>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>

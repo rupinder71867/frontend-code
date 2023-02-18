@@ -1,8 +1,15 @@
 import { Button, Row, Col, Container, Table, Tab, Tabs, Form } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
-import { FaStripe } from "react-icons/fa";
+import { FaStripe, FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 
 const Integration = (props) => {
+  const navigate = useNavigate();
+  const redirectHome = () => {
+    navigate('/');
+  }
+
   return (
     <Container>
       <Row border-bottom mt-4>
@@ -52,7 +59,11 @@ const Integration = (props) => {
         <Col className='paymentItem'><Row><h5>MaximumMobile</h5></Row><Row><h6>Payment Free</h6></Row></Col>
         <Col className='paymentItem'><Row><h5>IsBank</h5></Row><Row><h6>Payment Free</h6></Row></Col>
       </Row>
-
+      <Row>
+        <Col>
+          <Button onClick={redirectHome} style={{ width: '100%', textAlign: 'center', margin: "20px" }}><FaArrowLeft /> Back</Button>
+        </Col>
+      </Row>
     </Container >
   )
 }

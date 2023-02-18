@@ -1,11 +1,19 @@
-import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav, Button } from 'react-bootstrap';
 import Shifts from './Shifts';
 import OnlineInventory from './OnlineInventory';
 import Waitlist from './Waitlist';
 import Block from './Block';
 import BlockTable from './BlockTable';
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+
 
 const Availability = () => {
+ const navigate = useNavigate();
+ const redirectHome = () => {
+  navigate('/');
+ }
+
  return (
   <Container fluid>
    <Row className="mt-3">
@@ -33,6 +41,8 @@ const Availability = () => {
         <Nav.Link eventKey="fifth" className="nav-link">Waitlist</Nav.Link>
        </Nav.Item>
       </Nav>
+      <Button onClick={redirectHome} style={{ width: '100%' }}><FaArrowLeft /> Back</Button>
+
      </Col>
      <Col className='my-5 pe-5 ps-5 col-md-9'>
       <Tab.Content>

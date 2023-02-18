@@ -5,26 +5,31 @@ import MainCourse from './MainCourse';
 import Desserts from './Desserts';
 
 
-const AllMenu = () => {
+const AllMenu = (props) => {
+ const catList = props.categoryList;
+ const handleMenuItem = props.handleMenuItem;
+ //handleMenuItem(catList[0].title);
+
+ const handleMenu = (title) => {
+  console.log('title', title.target.text);
+  handleMenuItem(title.target.text);
+
+ }
+ console.log('catList=6', catList);
  return (<Tab.Container defaultActiveKey="first">
   <Row>
-   <Col className='my-5 col-md-3'>
+   <Col className='my-5'>
     <Nav variant="pills" className="flex-column">
-     <Nav.Item className='nav-item'>
-      <Nav.Link eventKey="first" className="nav-link">Starters</Nav.Link>
-     </Nav.Item>
-     <Nav.Item className='nav-item'>
-      <Nav.Link eventKey="second" className="nav-link">Slads</Nav.Link>
-     </Nav.Item>
-     <Nav.Item className='nav-item'>
-      <Nav.Link eventKey="third" className="nav-link">Main Courses</Nav.Link>
-     </Nav.Item>
-     <Nav.Item className='nav-item'>
-      <Nav.Link eventKey="fourth" className="nav-link">Desserts</Nav.Link>
-     </Nav.Item>
+     {
+      catList.map((x, i) =>
+       <Nav.Item className='nav-item' key={i}>
+        <Nav.Link eventKey={i} onClick={handleMenu} className="nav-link">{x.title}</Nav.Link>
+       </Nav.Item>
+      )
+     }
     </Nav>
    </Col>
-   <Col className='my-5 pe-5 ps-5 col-md-9'>
+   {/*<Col className='my-5 pe-5 ps-5 col-md-9'>
     <Tab.Content>
      <Tab.Pane eventKey="first">
       <Starter />
@@ -39,7 +44,7 @@ const AllMenu = () => {
       <Desserts />
      </Tab.Pane>
     </Tab.Content>
-   </Col>
+    </Col>*/}
   </Row>
  </Tab.Container>)
 }

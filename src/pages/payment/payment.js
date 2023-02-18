@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, Table } from 'react-bootstrap';
-import { FaTrashAlt } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 
 const Payment = () => {
  const [show, setShow] = useState(false);
@@ -12,6 +14,12 @@ const Payment = () => {
  const handleClose = () => {
   setShow(false);
  }
+
+ const navigate = useNavigate();
+ const redirectHome = () => {
+  navigate('/');
+ }
+
 
 
  return (
@@ -85,6 +93,10 @@ const Payment = () => {
     </Col>
    </Row>
    <Row>
+    <Col>
+     <Button onClick={redirectHome} style={{ width: '27%' }}><FaArrowLeft /> Back</Button>
+
+    </Col>
     <Col style={{ textAlign: 'right' }}>
      <Button style={{ width: '157px' }}>Open Order 100</Button>
     </Col>

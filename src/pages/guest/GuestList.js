@@ -2,6 +2,9 @@ import { Button, Row, Col, Container, Table } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import { FaTrashAlt } from "react-icons/fa";
 import AddGuestModal from './AddGuestModal';
+import { FaStripe, FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 
 const GuestList = (props) => {
  const { areaList } = props;
@@ -9,6 +12,11 @@ const GuestList = (props) => {
  const handleClose = () => {
   setShow(false);
  }
+ const navigate = useNavigate();
+ const redirectHome = () => {
+  navigate('/');
+ }
+
 
  const handleShow = () => setShow(true);
  const [guest, setGuest] = useState([]);
@@ -45,12 +53,13 @@ const GuestList = (props) => {
        <tr>
         <th>#</th>
         <th>Name</th>
-        <th>Net Spend</th>
-        <th>Avg Vist</th>
-        <th>Avg Cover</th>
-        <th>Visit</th>
-        <th>Cancal</th>
-        <th>No Show</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Phone No</th>
+        <th>Pin Code</th>
+        <th>Email</th>
+        <th>Assets</th>
         <th>Action</th>
        </tr>
       </thead>
@@ -58,13 +67,14 @@ const GuestList = (props) => {
        {guest.map((x, i) =>
         <tr key={i}>
          <td>{i + 1}</td>
-         <td>{x.gname}</td>
-         <td>{x.nspend}</td>
-         <td>{x.avisit}</td>
-         <td>{x.acover}</td>
-         <td>{x.vist}</td>
-         <td>{x.cancal}</td>
-         <td>{x.noshow}</td>
+         <td>{x.fname}</td>
+         <td>{x.city}</td>
+         <td>{x.state}</td>
+         <td>{x.country}</td>
+         <td>{x.mobilenumber}</td>
+         <td>{x.pincode}</td>
+         <td>{x.email}</td>
+         <td>SAR 0 NET SPEND |0 CANCELS</td>
          <td><FaTrashAlt onClick={() => removeTable(i)} /></td>
         </tr>
 
@@ -72,6 +82,12 @@ const GuestList = (props) => {
       </tbody>
      </Table>
 
+
+    </Col>
+   </Row>
+   <Row>
+    <Col>
+     <Button onClick={redirectHome} style={{ width: '100%' }}><FaArrowLeft /> Back</Button>
 
     </Col>
    </Row>

@@ -70,10 +70,6 @@ const CreateTrackingLink = (props) => {
      <Modal.Body>
       <Row>
        <Col>
-        <Form.Label style={{ width: '100%' }}>Social Media</Form.Label>
-        <Form.Control required type="text" name="socialMedia" onChange={handleChange} placeholder="Enter Social Media" />
-       </Col>
-       <Col>
         <Form.Label style={{ width: '100%' }}>Link</Form.Label>
         <Form.Control type="text" name="Link" onChange={handleChange} />
        </Col>

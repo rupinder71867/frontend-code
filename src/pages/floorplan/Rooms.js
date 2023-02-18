@@ -1,12 +1,19 @@
-import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav, Button } from 'react-bootstrap';
 import RoomListing from './RoomListing';
 import SittingAreaListing from './SittingAreaListing';
 import TableListing from './TableListing';
 import TableGrouping from './TableGrouping';
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 
 const Rooms = () => {
+  const navigate = useNavigate();
+  const redirectHome = () => {
+    navigate('/');
+  }
+
   const [tablesList, setTablesList] = useState([]);
   const [areaList, setAreaList] = useState([]);
   const [roomList, setRoomList] = useState([]);
@@ -44,6 +51,8 @@ const Rooms = () => {
                 <Nav.Link eventKey="fourth" className="nav-link">Table Grouping</Nav.Link>
               </Nav.Item>
             </Nav>
+            <Button onClick={redirectHome} style={{ width: '100%' }}><FaArrowLeft /> Back</Button>
+
           </Col>
           <Col className='my-5 pe-5 ps-5 col-md-9'>
             <Tab.Content>

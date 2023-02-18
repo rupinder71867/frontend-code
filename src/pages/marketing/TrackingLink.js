@@ -39,7 +39,6 @@ const TrackingLink = () => {
      <thead>
       <tr>
        <th>#</th>
-       <th>Social Media</th>
        <th>Link</th>
        <th>Link Id</th>
        <th></th>
@@ -49,7 +48,6 @@ const TrackingLink = () => {
       {emailData.map((x, i) =>
        <tr>
         <td>{i + 1}</td>
-        <td>{x.socialMedia}</td>
         <td>{x.Link}</td>
         <td>{x.LinkId}</td>
         <td><FaCopy /></td>

@@ -32,7 +32,7 @@ const Profile = () => {
         setValidated(true);
     };
     return (
-        <Row>
+        <Row style={{ backgroundColor: 'grey', border: '1px solid', borderRadius: '2px' }}>
             <Col>
                 <h4>Profile Information</h4>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>

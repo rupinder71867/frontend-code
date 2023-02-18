@@ -32,7 +32,7 @@ const AddGuestModal = (props) => {
 
  return (
   <>
-   <Modal show={show} onHide={handleClose}>
+   <Modal show={show} className="modal-lg" onHide={handleClose}>
     <Modal.Header closeButton>
      <Modal.Title>Add Guest</Modal.Title>
     </Modal.Header>
@@ -40,46 +40,45 @@ const AddGuestModal = (props) => {
      <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Row>
        <Col>
-        <Form.Label>Title</Form.Label>
-        <Form.Control required type="text" name="gname" onChange={handleChange} />
+        <Form.Label>First Name</Form.Label>
+        <Form.Control required type="text" name="fname" onChange={handleChange} />
+       </Col>
+       <Col>
+        <Form.Label>Last Name</Form.Label>
+        <Form.Control required type="text" name="lname" onChange={handleChange} />
        </Col>
       </Row>
       <Row className='mt-2'>
        <Col>
-        <Form.Label>Net Spend</Form.Label>
-        <Form.Control required type="number" name="nspend" onChange={handleChange} />
+        <Form.Label>Pin code</Form.Label>
+        <Form.Control required type="text" name="pincode" onChange={handleChange} />
+       </Col>
+       <Col>
+        <Form.Label>City</Form.Label>
+        <Form.Control required type="text" name="city" onChange={handleChange} />
        </Col>
       </Row>
       <Row className='mt-2'>
        <Col>
-        <Form.Label>Avg Vist</Form.Label>
-        <Form.Control required type="number" name="avisit" onChange={handleChange} />
+        <Form.Label>State</Form.Label>
+        <Form.Control required type="text" name="state" onChange={handleChange} />
+       </Col>
+       <Col>
+        <Form.Label>Country</Form.Label>
+        <Form.Control required type="text" name="country" onChange={handleChange} />
        </Col>
       </Row>
       <Row className='mt-2'>
        <Col>
-        <Form.Label>Avg Cover</Form.Label>
-        <Form.Control required type="number" name="acover" onChange={handleChange} />
+        <Form.Label>Email</Form.Label>
+        <Form.Control required type="email" name="email" onChange={handleChange} />
        </Col>
-      </Row>
-      <Row className='mt-2'>
        <Col>
-        <Form.Label>Vist</Form.Label>
-        <Form.Control required type="number" name="vist" onChange={handleChange} />
+        <Form.Label>Mobile Number</Form.Label>
+        <Form.Control required type="text" name="mobilenumber" onChange={handleChange} />
        </Col>
       </Row>
-      <Row className='mt-2'>
-       <Col>
-        <Form.Label>Cancal</Form.Label>
-        <Form.Control required type="number" name="cancal" onChange={handleChange} />
-       </Col>
-      </Row>
-      <Row className='mt-2'>
-       <Col>
-        <Form.Label>No Show</Form.Label>
-        <Form.Control required type="number" name="noshow" onChange={handleChange} />
-       </Col>
-      </Row>
+
       <Row className='mt-2'>
        <Col align="Right">
         <Button type="submit">Add Guest</Button>
